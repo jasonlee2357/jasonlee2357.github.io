@@ -42,7 +42,7 @@ function startup() {
 }
 
 function getList(){
-  slist1 = loadStrings("listx.php", function(){
+  slist1 = loadStrings("list.txt", function(){
 
     pcnt = 0;
     let m1 = document.querySelector("#mlist");
