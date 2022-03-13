@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MULTICORE PLAYER</title>
+    <link rel="icon" href="multicore_logo.ico" sizes="32x32">
+    <script src="p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+  </head>
+  <body>
+    <div id="player"></div>
+    <div id="vcode" class="vcode"> -------- </div>
+    <div id="YoutubeID">
+      <label for="vtitle">Youtube Title:</label>
+      <input type="text" id="vtitle" name="vtitle" placeholder="Youtube Video Title" title="Youtube Video Title"><br>
+      <label for="videoID">Youtube videoID:</label>
+      <input type="text" id="videoID" name="videoID" placeholder="slSxBDd2YB4" title="Youtube videoID">
+      <div id="act">
+        <input type="button" onclick="openNav()" value="播放清單!"> |       
+        <input type="button" onclick="play1()" value="播放!">
+        <input type="button" onclick="pause1()" value="暫停!"> | 
+        <input type="button" onclick="chg()" value="切換!"> | 
+        <input type="button" onclick="download1()" value="下載清單!"> | 
+        <input type="button" onclick="clearList()" value="清除清單!">
+      </div>
+    </div>
+    <div id="uploadx">
+    <form id="fr1" action="upload_add.php" method="post" enctype="multipart/form-data" target="ff1">
+      <input id="album" type="text" name="album">
+      <input id="file1" type="file" name="file1" required>(*.json)
+      <input id="mid" type="text" name="mid" style="display:none">
+      <button onclick="sendFile()">上傳！</button>
+      
+    </form>
+    <iframe src="" name="ff1" id="ff1" style="border:0px; display:none"></iframe>
+    </div>
+    <div id="music_list"></div>
+
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+      <!-- Overlay content -->
+      <div class="overlay-content" style="position: absolute; top:30px">
+        <div id="mlist"></div>
+        <!-- <a href="javascript:void(0)" onclick="switch_list(0)">a1</a>
+        <a href="javascript:void(0)" onclick="switch_list(1)">a2</a>
+        <a href="javascript:void(0)" onclick="switch_list(2)">a3</a>
+        <a href="javascript:void(0)" onclick="switch_list(3)">a4</a> -->
+      </div>
+
+      <div style="display: none">
+        <a id="mx" mid="0" href="javascript:void(0)" onclick="switch_list(3)">a4</a>
+      </div>
+
+    </div>
+
+    <script src="sketch.js"></script>
+</body></html>
