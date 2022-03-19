@@ -5,7 +5,6 @@ data/LIVE IN LIVING 10.json
 data/LIVE IN LIVING 13.json
 data/LIVE IN LIVING for Good Night.json
 data/YELLOW BIRD.json
-data/list.txt
 data/月見草.json
 data/こんにちは.json
 data/羊毛與千葉花.json
